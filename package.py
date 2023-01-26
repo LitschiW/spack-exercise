@@ -36,14 +36,8 @@ class SpackExercise(CMakePackage):
     version("0.2.0", 'c421df16911fd774aa072d7f6dd1746d0890918f7d0661202771382fbc9cf3db')
     version("0.1.0", '7e9513c1ff32152a707d3004bc6be91e077002963f9945cd5b16c04fc010d8ba')
     
-    version('develop', branch='main')
+    version('main', branch='main')
 
     depends_on("boost@1.65.1:", when="@0.2.0:")
     depends_on("yaml-cpp@0.7.0:", when="@0.3.0")
 
-    def cmake_args(self):
-        # FIXME: Add arguments other than
-        # FIXME: CMAKE_INSTALL_PREFIX and CMAKE_BUILD_TYPE
-        # FIXME: If not needed delete this function
-        args = []
-        return args 
